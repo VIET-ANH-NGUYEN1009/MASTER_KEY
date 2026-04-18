@@ -1,0 +1,18 @@
+import IO_init as GPIO
+from time import sleep
+
+# Khởi tạo IO
+GPIO.Init()
+print("Khoi tao IO hoan tat")
+
+# Chân relay điều khiển khóa từ
+LOCK = GPIO.GPIO_LOCK
+
+while True:
+    print("LOCK ON - Khoa tu HUT")
+    GPIO.SetIOOutput(LOCK, 1)   # bật relay → khóa hút
+    sleep(3)
+
+    print("LOCK OFF - Khoa tu MO")
+    GPIO.SetIOOutput(LOCK, 0)   # tắt relay → khóa nhả
+    sleep(3)
