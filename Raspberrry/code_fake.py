@@ -58,8 +58,10 @@ def main():
         global GPIO_LOCK_status
         if chuoi == "OK":
             GPIO_LOCK_status = True
+            print("ok")
         else:
             GPIO_LOCK_status = False
+            print("NG")
 
     def count_cuamo():
         global dem_cuamo, dem
