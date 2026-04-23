@@ -84,6 +84,7 @@ def main():
             print("State 1: Relay ON")
 
         elif GPIO_LOCK_status and sensor == 0 and dem == 1:
+            IO_init.SetIOOutput(IO_init.GPIO_LOCK, 0)
             count_cuamo()
             print("State 2: Waiting door open")
 
